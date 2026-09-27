@@ -1,6 +1,4 @@
-# Manual de instalacion de la aplicacion web
-
-"INTRO"
+# Manual para instalar la aplicacion web
 
 ## Decisiones de proyecto
 
@@ -18,21 +16,27 @@
 1. Actualizar el sistema
 `sudo apt update`
 `sudo apt upgrade`
+
 2. Instalar y configurar Git
 `sudo apt git`
 `git init`
 `git add .`
 `git commit -m "Commit incial con readme y pagina principa formulario web"`
+
 3. Instalar VSC y Plugins:
     - Markdown all in one
+
 4. Instalar Apache2
 `sudo apt install apache2`
+
 5. Cambio de propietario y permisos de carpeta
 `sudo chown -R $USER:$USER /var/www/html`
 `sudo chmod -R u=rwX,go=rX /var/www/html`
+
 6. Creacion de nueva carpeta de "Incidencias", y cambio de propietario de carpeta
 `sudo mkdir -p /var/www/incidencias.ies.teis`
 `sudo chown -R $USER:$USER /var/www/incidencias.ies.teis`
+
 7. Creacion de Documento "incidencias.ies.teis.conf"
 `sudo nano /etc/apache2/sites-available/incidencias.ies.teis.conf`
 <VirtualHost *:80>
@@ -87,7 +91,7 @@ git commit -m "comentario"
 
 3. Sincronizacion entre github y equipo local
 ```bash
-git remote add origin https://github.com/CLOUD-29/incidencias.ies.teis.git
+git remote add origin https://github.com/Zundiox/incidencias.ies.teis.git
 git branch -M main
 git push -u origin main
 ```
@@ -186,7 +190,7 @@ def crear_incidencia():
 
     Aula = request.from["aula"]
     Usuario = request.form["usuario"]
-    Descripcion = request.form["dsecripcion"]
+    Descripcion = request.form["descripcion"]
 
     return "Incidencia recibida"
 ```
@@ -241,7 +245,7 @@ select user from mysql.user;
 
 - Primera vez que descargamos datos de GitHub
 ``` bash
-git clone https://github.com/CLOUD-29/incidencias.ies.teis.git
+git clone https://github.com/Zundiox/incidencias.ies.teis.git
 ```
 
 - Actualizar documentos tras haber hecho instalacion para actualizar cambios de GitHub
