@@ -17,11 +17,17 @@
 `sudo apt update`
 `sudo apt upgrade`
 
-2. Instalar y configurar Git
+2. Instalar y configurar Git nombre y correo:
 `sudo apt git`
 `git init`
 `git add .`
 `git commit -m "Commit incial con readme y pagina principa formulario web"`
+
+`git config --global user.name "Zundiox"`
+`git config --global user.email "Zundiox@gmail.com"`
+
+Para añadir cosas:
+`add .` y `commit` sino no tiene nada que actualizar. Seguido de un `push`
 
 3. Instalar VSC y Plugins:
     - Markdown all in one
